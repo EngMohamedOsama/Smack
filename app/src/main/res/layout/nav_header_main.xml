@@ -11,41 +11,65 @@
     tools:layout_editor_absoluteY="81dp">
 
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="56dp"
+        android:id="@+id/navUserImage"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:contentDescription="@string/nav_header_desc"
         android:paddingTop="@dimen/nav_header_vertical_spacing"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/navLoginBtn"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/profiledefault" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/navUserName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:paddingTop="@dimen/nav_header_vertical_spacing"
         android:text="Mohamed Osama"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="@+id/imageView" />
+        app:layout_constraintStart_toEndOf="@+id/navUserImage"
+        app:layout_constraintTop_toTopOf="@+id/navUserImage" />
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
+        android:id="@+id/navUserEmail"
+        android:layout_width="195dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:text="EngMohamedOsama@04Egypt.com"
+        android:text="Osama@04Egypt.com"
         android:textStyle="italic"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintStart_toEndOf="@+id/navUserImage"
+        app:layout_constraintTop_toBottomOf="@+id/navUserName" />
+
+    <Button
+        android:id="@+id/navLoginBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:onClick="navLogin"
+        android:text="Login"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/addChannelBtn"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@android:color/transparent"
+        android:onClick="addChannel"
+        android:padding="5dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/addchannelbutton" />
 
 </android.support.constraint.ConstraintLayout>
